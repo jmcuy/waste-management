@@ -8,7 +8,9 @@ const config = {
     appId: "1:1041857566086:web:92122680862e9b34"
 };
 firebase.initializeApp(config);
+
 let db = firebase.database()
+
 function write(db){
     db.ref('admins/').once('value', function(snapshot){
         snapshot.forEach(function(childSnapshot){
@@ -64,4 +66,10 @@ $(document).ready(function () {
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+    db.ref('admins/user1').once('value').then(function(snapshot) {
+        if (!snapshot.child('login').val()){
+            document.getElementById('for-admin').style.display = 'None'
+        }
+    })
 });

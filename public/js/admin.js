@@ -24,7 +24,7 @@ function search_results(){
             result = []
             snapshot.forEach(function(childsnap){
                 console.log(field)
-                if (childsnap.child(field).val().toLowerCase().includes(data)){
+                if (childsnap.child(field).val().toLowerCase().includes(data.toLowerCase())){
                     result.push(childsnap)
                 }
             })
