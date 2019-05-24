@@ -47,7 +47,23 @@ function open_cust(){
     // document.getElementsByClassName("container")[1].firstChild.style.display = "none";
 }
 
-
+function log_out(path){
+    let id = "user1"
+    let pass = "123456"
+    event.preventDefault()
+    db.ref('admins/').once('value').then(function(snapshot) {
+        snapshot.forEach(child => {
+            if (child.child('id').val() == id && child.child('pass').val() == pass){
+              db.ref('admins/user1/').update({
+                login: false              
+              });
+              console.log('here')
+            }
+        })
+    }).then(function(){
+        window.location = path
+    });
+}
 $(document).ready(function () {
     
     write(db)

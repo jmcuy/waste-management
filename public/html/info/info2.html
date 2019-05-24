@@ -1,64 +1,153 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Types of Wastes</title>
-		<style>
-			
-		</style>
+		<title>Types of Waste</title>
+		<link rel="stylesheet" type="text/css" href="../../cat1.css"> 
+		  <!-- Bootstrap CSS CDN -->
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+		  <!-- Scrollbar Custom CSS -->
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  
+		  <!-- Font Awesome JS -->
+		  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+		  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 	</head>
-
 	<body>
-		<div style= "border: 100px 
-					margin-top: 100px;
-  					margin-bottom: 100px;
-  					margin-right: 150px;
-  					margin-left: 100px;
-  					background-color: white;
-  					font-family:calibri;">
+		<!-- side menu -->
+		<div class="wrapper">
+                <!-- Sidebar  -->
+                <nav id="sidebar">
+                    <div id="dismiss">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+        
+                    <div class="sidebar-header">
+                        <h3>Waste Management</h3>
+                    </div>
+        
+                    <ul class="list-unstyled components">
+                        <p>Welcome User</p>
+                        <li class="active">
+                            <a href="../../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../../html/about.html">About</a>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Information Section</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="info1.html">Waste Management</a>
+                                </li>
+                                <li>
+                                    <a href="info2.html">Type of Waste</a>
+                                </li>
+                                <li>
+                                    <a href="info3.html">Zero-waste living</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <div id='for-admin'>
+							<li>
+								<a href="../../html/admin-page.html">Admin Page</a>
+							</li>
+							<li>
+								<a href="../../html/add-notice.html">Add Announcements & Notices</a>
+							</li>
+						</div>
+                    </ul>
+                </nav>
+        
+                <!-- Page Content  -->
+                <div id="content">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <div class="wm-logo">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                        <i class="fa fa-bars"></i>
+                                        <!-- <span>Toggle Sidebar</span> -->
+                                    </button>
+                                    <div class="container" id="wm-logo">WM LOGO <i class="fas fa-leaf"></i></div>
+                            </div>
+                            <!-- top navigation bar-->
+                            <div class="rightnav">
+                                <div class="container" id="account" onclick="redirect('./html/sign-in.html')"><i class="fas fa-user-lock"></i></div>
+                            </div>
 
-			<h3>Types of Wastes</h3>
-			<p>
-				Generally, waste could be liquid or solid waste. Both of them could be hazardous. Liquid and solid waste types can also be grouped into organic, re-usable and recyclable waste.<br>
-				Let us see some details below:<br><br></p>
-
-			<h3>Solid Wastes</h3>
-			<img src="solid waste1.png" alt="Solid Wastes" width="500" height="150">
-			<img src="solid waste2.png" alt="Solid Wastes" width="500" height="150">
-			<p>	Solid waste predominantly, is any garbage, refuse or rubbish that we make in our homes and other places. These include old car tires, old newspapers, broken furniture and even food waste. They may include any waste that is non-liquid.</p>	
-
-			<br><br>
+                        </div>
+                    </nav>
+                    <div class="welcome-container" >
+						<div style= "border: 100px 
+						margin-top: 100px;
+						  margin-bottom: 100px;
+						  margin-right: 150px;
+						  margin-left: 100px;
+						  background-color: white;
+						  font-family:calibri;">
 	
-			<div style="display:inline-block;vertical-align:top;">
-   			 	<img src="medical waste2.jpg" alt="Solid Wastes" width="500" height="150" ><br>
-			<img src="medical waste1.jpg" alt="Solid Wastes" width="500" height="150">
-			</div>
-			<div style="display:inline-block;">
-    			<div><h3>Medical or Clinical sources of wastes</h3></div>
-    			<div><P>Wastes produced from health care facilities, <br>such as hospitals, clinics, surgical theaters, <br>veterinary hospitals, and labs are referred to <br>as medical/clinical waste. This includes surgical <br>items, pharmaceuticals, blood, body parts, wound <br>dressing materials, needles and syringes</P></div>
-			</div>
-
-			<br><br>
-
-			<div style="display:inline-block;vertical-align:top;">
-   			 	<img src="organic waste2.jpg" alt="Solid Wastes" width="500" height="150">
-			</div>
-			<div style="display:inline-block;">
-    			<div><h3>Organic waste</h3></div>
-    			<div><P>Organic waste comes from plants or animals sources. <br>Commonly, they include food waste, fruit and vegetable peels,<br> flower trimmings and even dog poop can <br>be classified as organic waste. They are<br> iodegradable (this means they are easily broken <br>down by other organisms over time and turned into<br> manure). Many people turn their organic waste<br> into compost and use them in their gardens.</P></div>
-			</div>
-			
-			<br><br>
-
-			<div style="display:inline-block;vertical-align:top;">
-   			 	<img src="what-to-recycle-images.jpg" alt="Recyclable Waste" width="500" height="500""/>
-			</div>
-			<div style="display:inline-block;">
-    			<div><h3>Recyclable type:</h3></div>
-    			<div><P>Recycling is processing used materials (waste) into new, useful products. <br>This is done to reduce the use of raw materials that would have been used. <br>Waste that can be potentially recycled is termed "Recyclable waste".</P></div>
-			</div>	
-		</div>
+							<h3>Types of Wastes</h3>
+							<p>
+								Generally, waste could be liquid or solid waste. Both of them could be hazardous. Liquid and solid waste types can also be grouped into organic, re-usable and recyclable waste.<br>
+								Let us see some details below:<br><br></p>
+				
+							<h3>Solid Wastes</h3>
+							<img src="solid waste1.png" alt="Solid Wastes" width="500" height="150">
+							<img src="solid waste2.png" alt="Solid Wastes" width="500" height="150">
+							<p>	Solid waste predominantly, is any garbage, refuse or rubbish that we make in our homes and other places. These include old car tires, old newspapers, broken furniture and even food waste. They may include any waste that is non-liquid.</p>	
+				
+							<br><br>
+					
+							<div style="display:inline-block;vertical-align:top;">
+									<img src="medical waste2.jpg" alt="Solid Wastes" width="500" height="150" ><br>
+							<img src="medical waste1.jpg" alt="Solid Wastes" width="500" height="150">
+							</div>
+							<div style="display:inline-block;">
+								<div><h3>Medical or Clinical sources of wastes</h3></div>
+								<div><P>Wastes produced from health care facilities, <br>such as hospitals, clinics, surgical theaters, <br>veterinary hospitals, and labs are referred to <br>as medical/clinical waste. This includes surgical <br>items, pharmaceuticals, blood, body parts, wound <br>dressing materials, needles and syringes</P></div>
+							</div>
+				
+							<br><br>
+				
+							<div style="display:inline-block;vertical-align:top;">
+									<img src="organic waste2.jpg" alt="Solid Wastes" width="500" height="150">
+							</div>
+							<div style="display:inline-block;">
+								<div><h3>Organic waste</h3></div>
+								<div><P>Organic waste comes from plants or animals sources. <br>Commonly, they include food waste, fruit and vegetable peels,<br> flower trimmings and even dog poop can <br>be classified as organic waste. They are<br> iodegradable (this means they are easily broken <br>down by other organisms over time and turned into<br> manure). Many people turn their organic waste<br> into compost and use them in their gardens.</P></div>
+							</div>
+							
+							<br><br>
+				
+							<div style="display:inline-block;vertical-align:top;">
+									<img src="what-to-recycle-images.jpg" alt="Recyclable Waste" width="500" height="500""/>
+							</div>
+							<div style="display:inline-block;">
+								<div><h3>Recyclable type:</h3></div>
+								<div><P>Recycling is processing used materials (waste) into new, useful products. <br>This is done to reduce the use of raw materials that would have been used. <br>Waste that can be potentially recycled is termed "Recyclable waste".</P></div>
+							</div>	
+						</div>
+				
+							
+                        
+                    </div>
+                </div>
+            </div>
+	
 	</body>
+	 <!-- jQuery CDN - Slim version (=without AJAX) -->
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	 <!-- Popper.JS -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	 <!-- Bootstrap JS -->
+	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	 <!-- jQuery Custom Scroller CDN -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+	 
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+	 <script src="../../js/main.js"></script>
 </html>
 
-
- 

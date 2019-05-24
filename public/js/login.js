@@ -14,7 +14,10 @@ function login(){
             console.log('here')
           }
       })
-  })
+    }).then(function(){
+      window.location = "../html/admin-page.html"
+    });
+
   
     
 }

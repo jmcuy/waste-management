@@ -198,6 +198,8 @@ function warn(id){
         $('.overlay').addClass('active');
         db.ref('items/').child(id).update({
             notified: "true"
+        }).then(()=>{
+            console.log("no error")
         });
         document.getElementById("status-report").style.display ="block";        
     }
@@ -225,7 +227,8 @@ function filter(opt){
 
 function expand(id){
     let path = db.ref('items/' + id);
-    console.log(path)
+    // console.log(path)
+    console.log("ID   ",id)
     if (!warning){
         $('.overlay').addClass('active');
         document.getElementById("item-expand").style.display = "block"
@@ -245,10 +248,6 @@ function expand(id){
                 "contact info: "+ snap.child('contact').val() + "<br><hr>"
                 + "problems:<br>" + snap.child('problems').val() + "<br><hr>"
                 + "if delayed:<br>" + "weeks delayed: " + snap.child('Delay').val()
-
-                
-
-               
             }  
         }); 
 

@@ -117,7 +117,8 @@ textarea{
     display: block;
     text-align: center;
     overflow: hidden;
-    height: 850px;
+    /* height: 850px; */
+    height: calc(100vh - 200px);
     font-size: 20px;
     /* background:rgba(0, 217, 255, 0.226); */
 }
