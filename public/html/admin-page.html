@@ -86,22 +86,7 @@
                 <button type="button" style="z-index: 200" onclick="Close()" class="close" > × </button>
                 Search Result: ITEM <hr>
                 <div id="search-item-container">
-                    <div class="item" id="item1">
-                        <b>name: asdadadadadasd </b><br>
-                        address: asdadadadadasdada <br>
-                        status: adasdsad <br> <hr>
-                    </div>
-                    <div class="item" id="item1">
-                        <b>name: asdadadadadasd </b><br>
-                        address: asdadadadadasdada <br>
-                        status: adasdsad <br> <hr>
-                    </div>
-                    <div class="item" id="item1">
-                        <b>name: asdadadadadasd </b><br>
-                        address: asdadadadadasdada <br>
-                        status: adasdsad <br> <hr>
-                    </div>
-                    
+                                        
                 </div>
             </div>
             
@@ -110,17 +95,16 @@
                         WELCOME USER!
                     <div class="search-bar">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Please choose an option...">
+                            <input type="text" id="search-data" class="form-control" placeholder="Please choose an option...">
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" type="button" onclick="search_results()">
                                     <i class="fa fa-search"></i>
                                 </button>
                                 <div class="dropdown">
                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                        <a id="drpdown-item">Select</a></button><br> 
+                                        <a id="drpdown-item">Name</a></button><br> 
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" onclick="drpdown('LN')">Last Name</a>
-                                            <a class="dropdown-item" onclick="drpdown('FN')">First Name</a>
+                                            <a class="dropdown-item" onclick="drpdown('N')">Name</a>
                                             <a class="dropdown-item" onclick="drpdown('CP')">City/Province</a>
                                         </div>
                                 </div>
