@@ -28,11 +28,11 @@ function sort_items(cat,filter){
     
     db.ref('items/').once("value", function(snapshot){
         console.log("sort")
-        console.log(cat, filter)
+        console.log(cat, decodeURI(filter))
         let parent = document.getElementById("items-container")
         let size = snapshot.numChildren()
         snapshot.forEach(function(child){
-            if(Number.isNaN(filter) || filter == ""){
+            if(filter == "Nan" || filter == ""){
                 console.log("no filter")
                 if(cat.toLowerCase() == child.child('category').val()){
                     let item_id = child.child('id').val()
@@ -61,34 +61,131 @@ function sort_items(cat,filter){
                     item.addEventListener("click", function(){
                         expand(item_id)
                     });
-
-                    if(child.child('notified').val() == "false"){
-                        console.log(!child.child('notified').val())
-                        warn_button.innerHTML = "WARN"
-                        warn_button.addEventListener("click", function(){
-                            warn(item_id); 
-                        });
-                    } else {
-                        warn_button.innerHTML = "alerted"
+                    if(child.child('status').val() != "okay" ){
+                        if(child.child('notified').val() == "false"){
+                            console.log(!child.child('notified').val())
+                            warn_button.innerHTML = "WARN"
+                            warn_button.addEventListener("click", function(){
+                                warn(item_id); 
+                            });
+                        } else {
+                            warn_button.innerHTML = "alerted"
+                        }
+    
+                    
+                        item.appendChild(warn_button)
                     }
 
-                    
-                    item.appendChild(warn_button)
                     parent.appendChild(item)
                 }
-            } else {
-                let filter2 = child.child('Septic').val()
-                if(cat == child.child('category').val() && filter == "NST" && filter2){
-                    console.log("NST",child)
-                }
-                if(cat == child.child('category').val() && filter == "FD2" && child.child('delay') > 0){
-                    console.log(child.child('delay').val())
-                    console.log("Delayed",child)
-                }
-                if(cat == child.child('category').val() && filter == "None"){
-                    console.log("None",child)
+            } 
+            else 
+            if( filter == "NST" && cat.toLowerCase() == child.child('category').val()){
+                let filter2 = child.child('septic').val()
+                if(filter2 == false){
+                    console.log("Asdada")
+                    let item_id = child.child('id').val()
+                    let item = document.createElement("div")
+                    item.className = "item";
+                    item.id = item_id
+
+                    let status = ""
+                    if(child.child('status').val() == "okay"){
+                        status +=  '<div class="bar" style="display:inline-block;width:20px;background:green;text-align:center">&nbsp</div> /okay'
+                    } 
+                    if(child.child('status').val() == "waiting"){
+                        status +=  '<div class="bar" style="display:inline-block;width:20px;background:yellow;text-align:center">&nbsp</div> /waiting'
+                    }
+                    if(child.child('status').val() == "delayed"){
+                        status += '<div class="bar" style="display:inline-block;width:20px;background:red;text-align:center">&nbsp</div> /delayed'
+                    }
+                    
+                    item.innerHTML = "name: " + child.child("name").val() + "<br><hr>"
+                    + "address: " + child.child("address").val() + "<br>" + "status: " + status;
+
+                    item.setAttribute("value","inactive")
+                    let warn_button = document.createElement("div");
+                    warn_button.className = "warn"
+                    
+                    item.addEventListener("click", function(){
+                        expand(item_id)
+                    });
+
+                    if(child.child('status').val() != "okay" ){
+                        if(child.child('notified').val() == "false"){
+                            console.log(!child.child('notified').val())
+                            warn_button.innerHTML = "WARN"
+                            warn_button.addEventListener("click", function(){
+                                warn(item_id); 
+                            });
+                        } else {
+                            warn_button.innerHTML = "alerted"
+                        }
+    
+                    
+                        item.appendChild(warn_button)
+                    }
+                    
+                    parent.appendChild(item)
+                    
                 }
             }
+    
+          
+            else if(filter == "FD2" && cat.toLowerCase() == child.child('category').val()){
+                console.log("dasda")
+                let filter2 = child.child('Delay').val() > 0
+                console.log("filter2")
+                if(filter2 == true){
+                    console.log("Asdada")
+                    let item_id = child.child('id').val()
+                    let item = document.createElement("div")
+                    item.className = "item";
+                    item.id = item_id
+
+                    let status = ""
+                    if(child.child('status').val() == "okay"){
+                        status +=  '<div class="bar" style="display:inline-block;width:20px;background:green;text-align:center">&nbsp</div> /okay'
+                    } 
+                    if(child.child('status').val() == "waiting"){
+                        status +=  '<div class="bar" style="display:inline-block;width:20px;background:yellow;text-align:center">&nbsp</div> /waiting'
+                    }
+                    if(child.child('status').val() == "delayed"){
+                        status += '<div class="bar" style="display:inline-block;width:20px;background:red;text-align:center">&nbsp</div> /delayed'
+                    }
+                    
+                    item.innerHTML = "name: " + child.child("name").val() + "<br><hr>"
+                    + "address: " + child.child("address").val() + "<br>" + "status: " + status;
+
+                    item.setAttribute("value","inactive")
+                    let warn_button = document.createElement("div");
+                    warn_button.className = "warn"
+                    
+                    item.addEventListener("click", function(){
+                        expand(item_id)
+                    });
+
+                    if(child.child('status').val() != "okay" ){
+                        if(child.child('notified').val() == "false"){
+                            console.log(!child.child('notified').val())
+                            warn_button.innerHTML = "WARN"
+                            warn_button.addEventListener("click", function(){
+                                warn(item_id); 
+                            });
+                        } else {
+                            warn_button.innerHTML = "alerted"
+                        }
+    
+                    
+                        item.appendChild(warn_button)
+                    }
+                    
+                    parent.appendChild(item)
+                    
+                }
+                console.log("Delayed",child)
+            }
+            
         });
     });
     
