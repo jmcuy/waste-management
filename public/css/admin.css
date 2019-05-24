@@ -70,3 +70,23 @@
 #search-item-container:hover{
     overflow-y:scroll;
 }
+
+
+#item-expand{
+    position: absolute;
+    top:100px;
+    left: calc(50% - 200px);
+    background: white;
+    z-index: 1000;
+    text-align: left;
+    width:400px;
+    padding:20px;  
+    min-height:350px; 
+}
+
+.pass{
+    background: rgb(99, 212, 247);
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
