@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Welcome Page</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" type="text/css" href="..\cat1.css"> 
+        <link rel="stylesheet" type="text/css" href="..\css\cat.css"> 
+          <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    </head>
+    <body>
+         <!-- side menu -->
+         <div class="wrapper">
+                <!-- Sidebar  -->
+                <nav id="sidebar">
+                    <div id="dismiss">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+        
+                    <div class="sidebar-header">
+                        <h3>Waste Management</h3>
+                    </div>
+        
+                    <ul class="list-unstyled components">
+                        <p>Welcome User</p>
+                        <li class="active">
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Information Section</a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="#">Page 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="admin-page.html">Admin Page</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <!-- Page Content  -->
+                <div id="content">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <div class="wm-logo">
+                                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                        <i class="fa fa-bars"></i>
+                                        <!-- <span>Toggle Sidebar</span> -->
+                                    </button>
+                                    <div class="container" id="wm-logo">WM LOGO <i class="fas fa-leaf"></i></div>
+                            </div>
+                            <!-- top navigation bar-->
+                            <div class="rightnav">
+                                    <div class="container" id="account"><i class="fas fa-user-alt"></i></div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="welcome-container" >   
+                        <div class="back" onclick="redirect('admin-page.html')"> < go back to search page</div>
+                        <div id="filter-container" style="float:right;margin-right:20px;"></div>
+                        <a class="title"></a><hr>
+                        <div class="categories">
+                            Select other category
+                            <ul>
+                                <li onclick="redirect('category.html', 'filter=Households')">Household</li>
+                                <li onclick="redirect('category.html', 'filter=Schools')">School</li>
+                                <li onclick="redirect('category.html', 'filter=Businesses')">Business</li>
+                                <li onclick="redirect('category.html', 'filter=Hospitals')">Hospital</li>
+                                <li onclick="redirect('category.html', 'filter=Malls')">Mall</li>
+                                <li onclick="redirect('category.html', 'filter=Restaurants')">Restaurant</li>
+                                <li onclick="redirect('category.html', 'filter=Convenience Store')">Convenience Store</li>
+
+                            </ul>
+                            Filters:
+                            <ul>
+                                <li onclick="filter(1)">No septic tank</li>
+                                <!-- <li onclick="filter(2)">Full septic tank</li> -->
+                                <li onclick="filter(3)">Failure to dispose in <br> 2 weeks</li>
+                                <li onclick="filter(4)">None</li>
+                            </ul>
+                        </div>
+                        <div class="cat-items" id="items-container">
+                            
+                            <!-- <div class="item" id="item1" value="inactive" onclick="expand('item1')">
+                                name: Chrisostomo <br><hr>
+                                address: Cebu City <br>
+                                status: <div class="bar" style="display:inline-block;width:20px;background:green;text-align:center">&nbsp</div> /okay
+                                <div class="warn"  onclick="warn('item1')">WARN</div>
+                            </div> -->
+                            <!-- <div class="item" id="item2" value="active">
+                                name: francisco <br><hr>
+                                address: Cebu City <br>
+                                status: <div class="bar" style="display:inline-block;width:20px;background:yellow;text-align:center">&nbsp</div> /waiting
+                                <div class="warn" onclick="warn('item2')" >alerted</div>
+                            </div> -->
+                            <!-- <div class="item" id="item3" value="inactive">
+                                name: Ms. Manananggal <br><hr>
+                                address: Cebu City <br>
+                                status: <div class="bar" style="display:inline-block;width:20px;background:red;text-align:center">&nbsp</div> /delayed
+                                <div class="warn" onclick="warn('item3')">WARN</div>
+                            </div> -->
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="item-expand" style="display:none;">
+                <div id="view1">
+                    <button type="button" style="z-index: 200" onclick="close_alert('item-expand')" class="close" > × </button>
+                    <br>
+                    <div id="view-content1">
+                        <!-- name: dasda <br><hr>
+                        address: sadadad<br>
+                        contact info:
+                        <br><hr>
+                        problems:<br>
+                        No Septic Tank<br>
+                        Delayed Tank<br> -->
+                        loading....
+                    </div>
+                    <hr><br>
+                    <div class="pass" onclick="switch_view()">view past transactions</div>
+                </div>
+                <div id="view2" style="display:none">
+                    <button type="button" style="z-index: 200" onclick="close_alert('item-expand')" class="close" > × </button>
+                    <br><hr>
+                    <div id="view2-items">
+                        <!-- <div class="item-id1" style>
+                            Date:<br>
+                            status: recieved / failed<br>
+                            Type of waste: RECYCLABLE<br> 
+                            Schedule: Mondays & Thursdays<br>
+                        </div><hr>
+                        <div class="item-id1" style>
+                            Date:<br>
+                            status: recieved / failed<br>
+                            Type of waste: RECYCLABLE<br> 
+                            Schedule: Mondays & Thursdays<br>
+                        </div><hr> -->
+                        laoding...
+                    </div>
+                    
+                </div>
+            
+            </div>
+            <div class="overlay"></div>
+            <div id="status-report" style="display:none">
+                <button type="button" style="z-index: 200" onclick="close_alert('status-report')" class="close" > × </button>
+                <br><hr>
+                <b>Alert Successfully Sent!! </b><br>
+                Warnings will automatically disappear once customer complies <br>
+                this page will now reload to reflect changes...
+            </div>
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/cat.js"></script>
+    </body>
+   
+
+</html>

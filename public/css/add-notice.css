@@ -1,0 +1,48 @@
+.announcement-board{
+    float: left;
+    outline: 1px solid black;
+    padding:20px;
+    width: 500px;
+    height: calc(100vh - 40vh);
+    margin-left:calc(50% - 250px);
+    text-align: center;
+
+}
+
+
+.input-announce{
+    text-align: center;
+    padding: 5px 10px 0 10px;
+   
+}
+.input-announce textarea{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.589);
+}
+.item{
+    /* outline: 1px solid black; */
+    padding:5px;
+
+}
+
+.post-btn{
+    margin-right:10px;
+    border-radius: 20px;
+    width:100px;
+    background:orangered;
+    text-align: center;
+    padding:0;
+    /* padding:5px; */
+}
+
+#items-container{
+    overflow: hidden;
+    height: 200px;
+    text-align: left;
+}
+#items-container:hover{
+    overflow-y: scroll;
+}
+
+.pad{
+    padding-left:30px;
+}

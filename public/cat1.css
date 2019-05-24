@@ -1,0 +1,354 @@
+html{
+    overflow: hidden;
+}
+
+.wm-logo{
+    font-size: 30px;
+    max-width: 300px !important;
+    display: inline-flex;
+    
+}
+
+#account{
+    display: inline-block;
+    float: right;
+    height: 50px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color:black;
+    font-size: 25px;
+    margin-right:20px;
+}
+
+/*===============right nav==============*/
+.rightnav{
+    white-space: nowrap;
+    cursor: pointer;
+    right:0;
+}
+/*==========END of right nav=============*/
+
+/*==============SEARCH BAR==============*/
+#search-nav{
+   width: 350px;
+   display: inline-block;
+   min-width: 100px;
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: 5px;
+    height: 40px;
+    background: white;
+    border-radius: 30px;
+    padding: 5px;
+    width: 300px;
+}
+
+.search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background:none;
+    line-height: 40px;
+    padding: 0 10px;
+    caret-color:green;
+}
+.search_input, .search_icon{
+    margin-top: -5px;
+}
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:black;
+}
+/*===========END OF SEARCH BAR====================*/
+/*==========SEND CONCERNS BUTTON====== ========== */
+#supp-button{
+    position: absolute;
+    bottom: 0px;
+    right:20px;
+    background:#353b48;
+    font-size: 20px;
+    height: 40px;
+    width: 230px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: rgb(33, 128, 9);
+}
+
+.supp-container{
+    background: rgb(255, 146, 73);
+    position: absolute;
+    height: 400px;
+    right:0px;
+    padding: 20px;
+    font-size: 15px;
+    width: 450px;
+    color:white;
+}
+
+.supp-container input,textarea{
+    width:400px;
+    background: transparent;
+    border:none;
+    border-bottom:1px solid white;
+}
+textarea{
+    padding: 5px;
+    resize: none !important;
+}
+
+
+/*===============END OF CONCERNS BUTTON ==========*/
+
+/* ============= HOME PAGE==========*/
+.welcome-container{
+    /* font-family: 'Amatic SC', cursive; */
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    height: 850px;
+    font-size: 20px;
+    /* background:rgba(0, 217, 255, 0.226); */
+}
+.welcome-container:hover{
+    overflow-y: scroll;
+}
+/* .welcome-pic{
+    min-height: 1000px;
+    background: #353b48;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: 0;
+} */
+
+.content{
+    flex:1;
+    font-size: 7em;
+    text-align: center;
+    color: #353b48;
+    background: none;
+    padding-top:12%;
+    z-index: 100;
+}
+/* ================END OF HOMEPAGE ========== */
+/* ================top nav==================  */
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: rgb(65, 159, 246) !important;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+.btn{
+    background: #353b48 !important;
+}
+/*=================end of top nav=============== */
+/* ================SIDE MENU================= */
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: rgb(76, 109, 241);
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: rgb(76, 109, 241);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: rgb(76, 109, 241);
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.315);
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+    background: #6d7fcc;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    text-decoration: none;
+    color:white;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+/* #sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+} */
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+/* ================ END OF SIDE MENU============= */
+/* ---------------------------------------------------
+    CONTENT STYLE OF HOME
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ----------------------------------------------
+--------------------------------------------------*/
+.submit-btn{
+    /* float: right; */
+    margin: 5px auto;
+    background: hsl(207, 100%, 64%);
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 3px;
+    text-align: center;
+    color:white;
+}
+/*---------------------------------------------
+--------------------------------------------*/
+#announcements-container{
+    color:rgb(0, 153, 255);
+    text-align: left;
+    margin:0 auto;
+    display: inline-block;
+    width:750px;
+    /* background: #c3d3f569; */
+}
+
+#notice-container{
+    color:red;
+    margin:0 auto;
+    display: inline-block;
+    text-align: left;
+    width:750px;
+    /* background: #c3d3f569; */
+    /* padding:20px; */
+}

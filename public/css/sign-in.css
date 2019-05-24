@@ -1,0 +1,21 @@
+body{
+    background: #443e3e !important;
+    
+}
+
+.content{
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 0; 
+    font-size: 2em;
+}
+
+.sign-in-form{
+    font-size:20px;
+    text-align: left;
+    color: black;
+    background:white;
+    width: 500px;
+    padding:20px;
+    margin:0 auto;
+}
