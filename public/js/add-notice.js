@@ -33,7 +33,7 @@ function add_announcement(){
     });
     let date = new Date();
     console.log(date)
-    db.ref('announcements/' + "nan" + (size + 1)).set({
+    db.ref('announcements/').push({
         date: date.toLocaleDateString(),
         desc: desc,
         type:"announcement"

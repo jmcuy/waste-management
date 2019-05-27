@@ -4,7 +4,7 @@ function drpdown(opt){
     if(opt == "N"){
         label = "Name"
     } else if(opt == "CP") {
-        label = "City/Province"
+        label = "Address"
     }
     document.getElementById("drpdown-item").innerHTML = label;
     // location.reload;
@@ -17,7 +17,7 @@ function search_results(){
     if (data.trim() != ""){
         if (field == 'Name') {
             field = 'name'
-        } else if (field == 'City/Province'){
+        } else if (field == "Address"){
             field = 'address'
         }
         db.ref('items/').once('value').then(function(snapshot) {
