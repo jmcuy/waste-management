@@ -37,7 +37,7 @@
 
 #items-container{
     overflow: hidden;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 80vh);
     text-align: left;
 }
 #items-container:hover{
