@@ -37,7 +37,7 @@
 
 #items-container{
     overflow: hidden;
-    height: 150px;
+    height: calc(100vh - 150px);
     text-align: left;
 }
 #items-container:hover{
