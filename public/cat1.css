@@ -118,21 +118,13 @@ textarea{
     text-align: center;
     overflow: hidden;
     /* height: 850px; */
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px);
     font-size: 20px;
-    /* background:rgba(0, 217, 255, 0.226); */
+    padding: 20px;
 }
 .welcome-container:hover{
     overflow-y: scroll;
 }
-/* .welcome-pic{
-    min-height: 1000px;
-    background: #353b48;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: 0;
-} */
-
 .content{
     flex:1;
     font-size: 7em;
@@ -336,20 +328,31 @@ a.article:hover {
 /*---------------------------------------------
 --------------------------------------------*/
 #announcements-container{
-    color:rgb(0, 153, 255);
+    /* color:rgb(0, 153, 255); */
+    color:white;
+    padding:15px;
     text-align: left;
     margin:0 auto;
     display: inline-block;
     width:750px;
-    /* background: #c3d3f569; */
+    background: #6a707e69;
+
 }
 
 #notice-container{
-    color:red;
+    color:white;
+    background: #6a707e69;
     margin:0 auto;
     display: inline-block;
     text-align: left;
     width:750px;
-    /* background: #c3d3f569; */
-    /* padding:20px; */
+    /* color:white; */
+    padding:15px;
+}
+
+/*-------------------------------------------------
+-------------------------------------------------------*/
+#dismiss:hover{
+    background: none;
+    color:orangered;
 }

@@ -48,7 +48,7 @@ function sort_items(cat,filter){
                         status +=  '<div class="bar" style="display:inline-block;width:20px;background:yellow;text-align:center">&nbsp</div> /waiting'
                     }
                     if(child.child('status').val() == "delayed"){
-                        status += '<div class="bar" style="display:inline-block;width:20px;background:red;text-align:center">&nbsp</div> /delayed'
+                        status += '<div class="bar" style="display:inline-block;width:20px;background:red;text-align:center">&nbsp</div> /bad'
                     }
                     
                     item.innerHTML = "name: " + child.child("name").val() + "<br><hr>"

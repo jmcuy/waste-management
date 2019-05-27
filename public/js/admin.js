@@ -98,9 +98,9 @@ function switch_view(){
     let parent = document.getElementById("view2-items");
     
     db.ref('transactions/').once('value').then(function(snapshot) {
+        parent.innerHTML = ''
         snapshot.forEach(child => {
             if (child.child('id').val() == id ){
-                parent.innerHTML = ''
                 parent.innerHTML += "Date: " + child.child('date').val() + "<br>"
                     + "Status: " + child.child('status').val() + "<br>" +
                     "Type of waste: " + child.child('waste').val() + 

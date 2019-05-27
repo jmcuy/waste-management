@@ -1,3 +1,4 @@
+
 .announcement-board{
     float: left;
     outline: 1px solid black;
@@ -36,7 +37,7 @@
 
 #items-container{
     overflow: hidden;
-    height: 200px;
+    height: 150px;
     text-align: left;
 }
 #items-container:hover{

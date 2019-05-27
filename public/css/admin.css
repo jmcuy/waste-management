@@ -1,3 +1,10 @@
+html{
+    background: URL(https://i.redd.it/b3esnz5ra34y.jpg);
+   
+}
+.welcome-container{
+    overflow:hidden !important;
+}
 .content{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -89,4 +96,9 @@
     border-radius: 30px;
     text-align: center;
     cursor: pointer;
+}
+
+#view2-items{
+    overflow-y:scroll;
+    height: 250px;
 }
