@@ -31,7 +31,7 @@ function add_announcement(){
     db.ref('announcements/').once('value', function(snapshot){
         size = snapshot.numChildren()
     });
-    let date = new Date(Date.UTC(2019,4,24,0,0,0));
+    let date = new Date();
     console.log(date)
     db.ref('announcements/' + "nan" + (size + 1)).set({
         date: date.toLocaleDateString(),
